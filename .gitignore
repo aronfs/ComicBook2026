@@ -1,3 +1,31 @@
-
 # Dependencies
 node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Bun
+bun.lockb
+
+# Build
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+logs/
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+
+# Editor
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
