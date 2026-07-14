@@ -1,0 +1,22 @@
+meta {
+  name: Admin - Create Comic Type
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/v1/admin/comic-types
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  {
+    "name": "Nuevo Tipo",
+    "description": "Descripción del nuevo tipo de cómic"
+  }
+}

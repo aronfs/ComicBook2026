@@ -1,0 +1,14 @@
+meta {
+  name: Add Favorite
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/favorites/{{comicId}}
+  body: none
+}
+
+headers {
+  Authorization: Bearer {{accessToken}}
+}

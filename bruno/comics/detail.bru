@@ -1,0 +1,14 @@
+meta {
+  name: Comic Detail
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/comics/{{comicSlug}}
+  body: none
+}
+
+headers {
+  Content-Type: application/json
+}

@@ -1,0 +1,13 @@
+{
+  "version": "2",
+  "name": "ComicBook 2.0 API",
+  "ignore": [],
+  "folders": [
+    "auth",
+    "users",
+    "comics",
+    "comic-types",
+    "favorites",
+    "admin"
+  ]
+}

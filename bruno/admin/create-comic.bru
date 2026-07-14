@@ -1,0 +1,40 @@
+meta {
+  name: Admin - Create Comic
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/admin/comics
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  {
+    "title": "El Guardián de la Ciudad",
+    "originalTitle": "The City Guardian",
+    "description": "Historia de un héroe que protege su ciudad.",
+    "synopsis": "Después de descubrir una antigua tecnología, un joven se convierte en el protector de su ciudad.",
+    "author": "Autor Ejemplo",
+    "illustrator": "Ilustrador Ejemplo",
+    "publisher": "Editorial ComicBook",
+    "publicationYear": 2026,
+    "issueNumber": 1,
+    "totalPages": 48,
+    "language": "es",
+    "isbn": "9781234567890",
+    "coverImageUrl": "https://example.com/covers/comic.jpg",
+    "comicTypeId": "{{comicTypeId}}",
+    "availability": "AVAILABLE",
+    "country": "México",
+    "ageRating": "12+",
+    "edition": "Primera",
+    "volume": 1,
+    "seriesName": "El Guardián"
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Update Me
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/api/v1/users/me
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  {
+    "firstName": "Nombre",
+    "lastName": "Apellido"
+  }
+}

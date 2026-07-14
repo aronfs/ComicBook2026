@@ -1,0 +1,29 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/auth/login
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "admin@comicbook.local",
+    "password": "ChangeMe123*"
+  }
+}
+
+script:post-response {
+  const data = res.getBody();
+  if (data.success) {
+    bru.setVar("accessToken", data.data.accessToken);
+    bru.setVar("refreshToken", data.data.refreshToken);
+  }
+}
